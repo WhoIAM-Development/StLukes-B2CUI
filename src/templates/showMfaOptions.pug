@@ -1,0 +1,45 @@
+include ../mixins/header.pug
+include ../mixins/body.pug
+include ../mixins/password-rules.pug
+
++header('Multi Factor Authentication', ['selfAsserted.css','password-helper.css'], ['password-helper.js'])
++renderBody('self_asserted_container show_mfa_options_container')
++password-rules
+
+script.
+    $(function(){
+        ManageMfaOptions();
+    });
+
+    function ManageMfaOptions()
+    {
+      if($('#api').length)
+      {
+        if($('#availablemfaOptions').length)
+        {
+          UpdateMfaOptions();
+        }
+      }
+      else {
+         setTimeout(function () {
+                ManageMfaOptions();
+            }, 300);
+      }
+    }
+
+    function UpdateMfaOptions()    {
+        let availableMfaOptions = $("#availablemfaOptions").text().split(',');
+
+        $("#api input[type=radio][name='MFAOptions_Verification']").each(function() {
+
+            var idVal = $(this).attr("id");
+              $("label[for='"+idVal+"']").text().replace('','');
+
+            if(!($.inArray(this.value,availableMfaOptions)>-1))
+            {
+              $("label[for='"+idVal+"']").attr('style','display:none !important;');
+
+              $(this).hide();
+            }
+        });
+    }

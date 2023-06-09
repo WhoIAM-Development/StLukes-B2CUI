@@ -76,14 +76,15 @@
 							margin: 15px 0 23px 0;
 							text-align: left;
 							button {
+                @include button-primary;
 								background-image: none;
-								background-color: #296ec6;
+								//background-color: #296ec6;
 								border: none;
-								border-radius: 0.5rem;
+								//border-radius: 0.5rem;
 								cursor: pointer;
 								display: inline-block;
-								font-size: 1em;
-								font-weight: 400;
+								//font-size: 1em;
+								//font-weight: 400;
 								height: inherit;
 								line-height: 1.3333333;
 								margin-top: 2rem;
@@ -101,16 +102,16 @@
 								-ms-touch-action: manipulation;
 								-ms-user-select: none;
 								-webkit-user-select: none;
-								color: #fff;
+								//color: #fff;
 								width: 63%;
-								box-shadow: 0 0px 30px 0px #dae1f7;
-								&:hover {
-									-moz-box-shadow: none;
-									-webkit-box-shadow: none;
-									box-shadow: none;
-									background-color: #1662c7;
-									color: #fff;
-								}
+								//box-shadow: 0 0px 30px 0px #dae1f7;
+								// &:hover {
+								// 	-moz-box-shadow: none;
+								// 	-webkit-box-shadow: none;
+								// 	box-shadow: none;
+								// 	background-color: #1662c7;
+								// 	color: #fff;
+								// }
 							}
 						}
 						.entry-item {

@@ -1,4 +1,6 @@
-﻿.buttons {
+﻿@use 'mixins';
+
+.buttons {
 	button {
 		&:hover {
 			background-image: none;
@@ -11,7 +13,7 @@
 	.row {
 		.panel-default {
 			margin: auto;
-			height: 100%;
+			height: auto;
 			background-color: white;
 			min-width: 400px;
 		}
@@ -32,21 +34,14 @@
 	height: 50px;
 }
 button#verifyCode {
-	background-color: #296ec6 !important;
 	margin-top: 2rem;
 	border-radius: 0.5rem;
-	color: white;
-	&:hover {
-		background-color: #1662c7 !important;
-	}
+
+  @include mixins.button-primary;
 }
+
 button#verifyPhone {
-	background-color: #296ec6 !important;
-	border-radius: 0.5rem;
-	color: white;
-	&:hover {
-		background-color: #1662c7 !important;
-	}
+	@include mixins.button-secondary;
 }
 #api {
 	#codeVerification {

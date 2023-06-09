@@ -1,5 +1,9 @@
 /** Social Button Styles **/
 /** Phone **/
+
+@use 'variables';
+@use 'mixins';
+
 html {
 	background: url("{{baseUrl}}/assets/images/{{backgroundName}}") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -8,11 +12,13 @@ html {
   background-size: cover;
 	height: 100%;
 }
+
 body {
-	font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "{{fontName}}", Helvetica, Arial, sans-serif;
   background-color: transparent !important;
 	text-align: left;
 	height: 100%;
+  backdrop-filter: blur(2px);
 }
 button:hover,
 a:hover {
@@ -22,6 +28,7 @@ p {
 	margin: 0px;
 }
 a {
+  color: variables.$link-color !important;
 	&:focus {
 		outline: none;
 	}
@@ -32,22 +39,22 @@ input {
 select {
 	border: 1px solid white;
 	&:focus {
-		border: 1px solid rgba(41, 110, 198, 0.5);
+		border: 1px solid variables.$input-outline-color;
 	}
 }
 input[type=password] {
 	&:focus {
-		border: 1px solid rgba(41, 110, 198, 0.5);
+		border: 1px solid variables.$input-outline-color;
 	}
 }
 input[type=text] {
 	&:focus {
-		border: 1px solid rgba(41, 110, 198, 0.5);
+		border: 1px solid variables.$input-outline-color;
 	}
 }
 input[type=email] {
 	&:focus {
-		border: 1px solid rgba(41, 110, 198, 0.5);
+		border: 1px solid variables.$input-outline-color;
 	}
 }
 .container {
@@ -154,34 +161,10 @@ ul {
 }
 .buttons {
 	#continue {
-		&:disabled {
-			margin: 0 auto;
-			width: 60%;
-			height: 50px;
-			background-color: #296ec6;
-			opacity: .3;
-			border-radius: 0.5rem;
-			border: none;
-			color: white;
-			font-size: 1em;
-		}
+    @include mixins.button-primary;
 		margin: 0 auto;
 		width: 60%;
 		height: 50px;
-		background-color: #296ec6;
-		opacity: 1;
-		border-radius: 0.5rem;
-		border: none;
-		color: white;
-		font-size: 1em;
-		box-shadow: 0 0px 30px 0px #dae1f7;
-		&:hover {
-			-moz-box-shadow: none;
-			-webkit-box-shadow: none;
-			box-shadow: none;
-			background-color: #1662c7;
-			border-color: #204d74;
-		}
 	}
 	#cancel {
 		padding: 0;
@@ -197,37 +180,35 @@ ul {
 		color: #505050;
 		box-shadow: none;
 		text-align: left;
+		visibility: hidden;
 		&:hover {
 			color: black !important;
+			&:before
+			{
+				border: 1px solid #000000;
+
+			}
 		}
 		&:before {
 			padding: 10px;
 			vertical-align: sub;
 			zoom: 90%;
 			display: inline-block;
+			content: "X" !important;
+			visibility: visible;
+			&:hover
+			{
+				border: 1px solid #000000;
+			}
 		}
 	}
 	button {
-		background-color: white;
-		-moz-border-radius: 0.5rem;
-		-webkit-border-radius: 0.5rem;
-		border-radius: 0.5rem;
+    @include mixins.button-primary;
 		width: 60%;
-		border: none;
-		font-size: 1em;
-		color: black;
 		cursor: pointer;
 		margin-top: 10px;
 		margin-right: auto;
 		white-space: normal;
-		box-shadow: 0px 2px 10px rgba(0,0,150,0.15);
-		&:hover {
-			border: none;
-			-moz-box-shadow: none;
-			-webkit-box-shadow: none;
-			background-color: #1662c7;
-			color: white !important;
-		}
 	}
 }
 #attributeList {
@@ -401,6 +382,7 @@ label {
 }
 .panel {
 	height: 100%;
+  border-radius: 2px;
 }
 .panel_layout {
 	height: 100%;
