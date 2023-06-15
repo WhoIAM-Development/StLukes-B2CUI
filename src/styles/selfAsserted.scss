@@ -286,3 +286,14 @@ div#email_info {
     }
   }
 }
+
+.collectQuestionAnswer
+{
+  #attributeList 
+  {
+    input[type="text"]
+    {
+      display: none;
+    }
+  }
+}
