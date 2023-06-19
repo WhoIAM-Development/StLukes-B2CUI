@@ -1,0 +1,13 @@
+include ../mixins/header.pug
+include ../mixins/body.pug
+include ../mixins/password-rules.pug
+
++header('Verify User - Activation Code', ['selfAsserted.css'])
++renderBody('self_asserted_container verifyUserActivationCodeWithLink')
+
+script.
+    $("#attributeList ul li.RadioSingleSelect").append("<a id='linkUseExperian' href='#'>Use Experian</a>");
+    $("#linkUseExperian").on('click',function(){
+        $("input[type=radio][value='experian']").attr('checked', 'checked');
+        $("#continue").click();
+    });
