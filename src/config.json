@@ -1,7 +1,7 @@
 {
     "baseUrl": "{Settings:StorageBaseUrl}",
     "clientName": "WhoIAM",
-    "imageName": "logo.png",
+    "imageName": "logo.svg",
     "backgroundName": "background.jpg",
     "cacheBustingKey": "{Settings:Build.BuildNumber}",
     "fontName": "Roboto",
