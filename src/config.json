@@ -5,7 +5,7 @@
     "backgroundName": "background.jpg",
     "cacheBustingKey": "{Settings:Build.BuildNumber}",
     "fontName": "Roboto",
-    "faviconName": "favicon.png",
+    "faviconName": "favicon.ico",
     "defaultScripts": ["load-dfp.js", "api-translate.js"],
     "defaultCss": ["assets.css", "common.css"],
     "activeLang": "es",
