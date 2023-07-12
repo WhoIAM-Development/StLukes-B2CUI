@@ -1,0 +1,25 @@
+#attributeList {
+    ul {
+        li.Readonly {
+            label {
+                display: block !important;
+            }
+        }
+
+        li.DateTimeDropdown {
+            label {
+                display: block !important;
+            }
+
+            select {
+                pointer-events: none;
+            }
+        }
+
+        li {
+            input[type="radio"] {
+                pointer-events: none;
+            }
+        }
+    }
+}
