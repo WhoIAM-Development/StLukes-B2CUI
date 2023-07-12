@@ -6,6 +6,10 @@
             }
         }
 
+        div.date {
+            width: 100%;
+        }
+
         li.DateTimeDropdown {
             label {
                 display: block !important;
@@ -13,12 +17,14 @@
 
             select {
                 pointer-events: none;
+                background-color: rgba(239, 239, 239, 0.3)
             }
         }
 
         li {
             input[type="radio"] {
                 pointer-events: none;
+                background-color: rgba(239, 239, 239, 0.3);
             }
         }
     }
