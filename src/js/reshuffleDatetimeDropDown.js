@@ -30,12 +30,12 @@ function applyRules() {
 function waitForElm(selector) {
   return new Promise((resolve) => {
     if (document.querySelectorAll(selector)) {
-      return resolve(document.querySelector(selector));
+      return resolve(document.querySelectorAll(selector));
     }
 
     const observer = new MutationObserver((mutations) => {
-      if (document.querySelector(selector)) {
-        resolve(document.querySelector(selector));
+      if (document.querySelectorAll(selector)) {
+        resolve(document.querySelectorAll(selector));
         observer.disconnect();
       }
     });
