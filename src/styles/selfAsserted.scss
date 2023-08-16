@@ -66,6 +66,9 @@
     ul {
       display: flex;
       flex-direction: column;
+      div.date {
+        width: 100%;
+      }
 
       li.VerificationControl {
         button {
@@ -289,7 +292,7 @@ div#email_info {
 
 .collectQuestionAnswer
 {
-  #attributeList 
+  #attributeList
   {
     input[type="text"]
     {
@@ -301,7 +304,7 @@ div#email_info {
 
 .verifyUserActivationCodeWithLink
 {
-  #attributeList 
+  #attributeList
   {
     ul{
       li.RadioSingleSelect
