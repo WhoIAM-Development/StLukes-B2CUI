@@ -6,5 +6,4 @@ $(document).ready(function() {
 
   // Detach and re-append the elements in the desired order
   $monthSelect.detach().insertBefore($daySelect);
-  $yearSelect.detach().insertBefore($monthSelect);
 });
