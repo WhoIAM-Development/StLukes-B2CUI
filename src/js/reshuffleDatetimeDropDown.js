@@ -6,10 +6,17 @@ $(document).ready(function() {
   // Detach and re-append the elements in the desired order
   $monthSelect.detach().insertBefore($daySelect);
 
-    // Store the select elements in variables
-    $daySelect = $('#readonly_DateOfBirth_day');
-    $monthSelect = $('#readonly_DateOfBirth_month');
+  // Store the select elements in variables
+  $daySelect = $('#readonly_DateOfBirth_day');
+  $monthSelect = $('#readonly_DateOfBirth_month');
 
-    // Detach and re-append the elements in the desired order
-    $monthSelect.detach().insertBefore($daySelect);
+  // Detach and re-append the elements in the desired order
+  $monthSelect.detach().insertBefore($daySelect);
+
+  // Store the select elements in variables
+  $daySelect = $('#external_DateOfBirth_day');
+  $monthSelect = $('#external_DateOfBirth_month');
+
+  // Detach and re-append the elements in the desired order
+  $monthSelect.detach().insertBefore($daySelect);
 });
