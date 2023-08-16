@@ -55,9 +55,6 @@ button#verifyPhone {
 			}
 		}
 		#phoneEntry {
-      div.code {
-        display: none;
-      }
 			select#countryCode {
 				height: 50px;
 				border-color: #608ef1;
@@ -89,6 +86,7 @@ button#verifyPhone {
 		margin-top: 10px;
 		.input {
 			.code {
+        display: none;
 				text-align: left;
 			}
 			.number {
