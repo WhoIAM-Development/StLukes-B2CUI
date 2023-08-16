@@ -219,7 +219,7 @@ ul {
 			margin: 1rem 0;
 			label {
 				float: left;
-				display: none !important;
+				display: inline-block !important;
 			}
 			label[for=country] {
 				float: left;
