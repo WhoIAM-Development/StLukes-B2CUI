@@ -55,6 +55,9 @@ button#verifyPhone {
 			}
 		}
 		#phoneEntry {
+      div.code {
+        display: none;
+      }
 			select#countryCode {
 				height: 50px;
 				border-color: #608ef1;
