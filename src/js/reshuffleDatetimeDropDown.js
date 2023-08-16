@@ -1,4 +1,10 @@
+const querySelector = '[id$=_year]'
+
 $(document).ready(function() {
+  waitForElm(querySelector).then((elm) => applyRules());
+});
+
+function applyRules() {
   // Store the select elements in variables
   var $daySelect = $('#dateOfBirth_day');
   var $monthSelect = $('#dateOfBirth_month');
@@ -19,4 +25,24 @@ $(document).ready(function() {
 
   // Detach and re-append the elements in the desired order
   $monthSelect.detach().insertBefore($daySelect);
-});
+}
+
+function waitForElm(selector) {
+  return new Promise((resolve) => {
+    if (document.querySelectorAll(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+
+    const observer = new MutationObserver((mutations) => {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  });
+}
