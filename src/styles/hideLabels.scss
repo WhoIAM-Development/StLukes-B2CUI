@@ -1,0 +1,13 @@
+#attributeList {
+	ul {
+		padding: 0;
+		li {
+			list-style: none;
+			margin: 1rem 0;
+			label {
+				float: left;
+				display: none !important;
+			}
+    }
+  }
+}
